@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appointments",
+  "info": {
+    "singularName": "appointment",
+    "pluralName": "appointments",
+    "displayName": "Appointment"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "UserName": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "email",
+      "required": true
+    },
+    "Date": {
+      "type": "string",
+      "required": true
+    },
+    "Time": {
+      "type": "string",
+      "required": true
+    },
+    "doctor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::doctor.doctor",
+      "inversedBy": "appointments"
+    },
+    "hospital": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hospital.hospital",
+      "inversedBy": "appointments"
+    },
+    "Kinde_id": {
+      "type": "string"
+    },
+    "Appointment_Id": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Appointment_Id"
+    }
+  }
+}

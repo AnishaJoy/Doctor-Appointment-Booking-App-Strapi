@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hospitals",
+  "info": {
+    "singularName": "hospital",
+    "pluralName": "hospitals",
+    "displayName": "Hospital"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "hospitals"
+    },
+    "appointments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appointment.appointment",
+      "mappedBy": "hospital"
+    }
+  }
+}
