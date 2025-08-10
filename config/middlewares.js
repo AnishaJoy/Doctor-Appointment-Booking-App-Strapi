@@ -21,7 +21,7 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['http://localhost:3000'], // frontend URL
+      origin: ['https://doctor-appointment-booking-app-three.vercel.app/'], // frontend URL
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
     },
