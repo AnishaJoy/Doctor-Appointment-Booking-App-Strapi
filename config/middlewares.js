@@ -9,8 +9,8 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
-          'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
+          'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com','https://doctor-appointment-booking-app-strapi.onrender.com'],
+          'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com','https://doctor-appointment-booking-app-strapi.onrender.com'],
           upgradeInsecureRequests: null,
         },
       },
@@ -20,8 +20,11 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
-      origin: ['https://doctor-appointment-booking-app-three.vercel.app/'], // frontend URL
+      origin: [
+        'http://localhost:3000',
+        'https://doctor-appointment-booking-app-three.vercel.app/',
+        'https://doctor-appointment-booking-app-strapi.onrender.com'
+      ], // frontend URL
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
     },
