@@ -22,7 +22,7 @@ module.exports = [
     config: {
       origin: [
         'http://localhost:3000',
-        'https://doctor-appointment-booking-app-three.vercel.app/',
+        'https://doctor-appointment-booking-app-three.vercel.app',
         'https://doctor-appointment-booking-app-strapi.onrender.com'
       ], // frontend URL
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
